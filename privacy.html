@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arjen apuri – Tietosuojaseloste</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+    line-height: 1.6;
+    color: #1c1c1e;
+    background: #fafaf8;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f2f2f2; background: #15151a; }
+    a { color: #7fb8a8; }
+    .card { background: #1f1f26; border-color: #333; }
+    table { border-color: #333 !important; }
+    td, th { border-color: #333 !important; }
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 0.2em; }
+  h2 { font-size: 1.15rem; margin-top: 2em; }
+  p, li { margin: 0.5em 0; }
+  a { color: #2f6e58; }
+  .card {
+    background: #fff;
+    border: 1px solid #e4e4e0;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 1.2em 0;
+  }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.95rem; }
+  td, th { border: 1px solid #e4e4e0; padding: 8px 10px; text-align: left; vertical-align: top; }
+  footer { margin-top: 3em; font-size: 0.85rem; opacity: 0.7; }
+  .updated { font-size: 0.85rem; opacity: 0.7; }
+</style>
+</head>
+<body>
+  <h1>Arjen apuri — Tietosuojaseloste</h1>
+  <p class="updated">Päivitetty 12.10.2026</p>
+
+  <div class="card">
+    <strong>Rekisterinpitäjä</strong>
+    <p>Someset Oy (Y-tunnus 94916239)<br />
+    Mertatie 14, 21100 Naantali<br />
+    Sähköposti: <a href="mailto:info@rakennuskuntoon.fi">info@rakennuskuntoon.fi</a></p>
+  </div>
+
+  <h2>Yleisperiaate</h2>
+  <p>Arjen apuri on suunniteltu niin, ettei sovelluksella ole omaa palvelinta eikä käyttäjätiliä. Kaikki tallentamasi tiedot (menot, muistikirja, kauppalista, lasten tähdet jne.) tallennetaan ensisijaisesti laitteellesi. Jos otat käyttöön perheen jakamisen, tiedot synkronoidaan Applen iCloud-palvelun (CloudKit) kautta suoraan perheesi laitteiden välillä — Someset Oy ei näe eikä käsittele tätä dataa omilla palvelimillaan.</p>
+
+  <h2>Mitä tietoja käsitellään ja miksi</h2>
+  <table>
+    <tr><th>Tieto</th><th>Käyttötarkoitus</th><th>Missä tieto säilyy</th></tr>
+    <tr><td>Kalenteritapahtumat</td><td>Näytetään päivän/viikon menot ja pakkauslistat</td><td>Vain laitteella, luetaan puhelimen omasta kalenterista</td></tr>
+    <tr><td>Muistutukset (Reminders)</td><td>Kauppalistan synkronointi, jaettavissa kumppanin kanssa Applen Muistutukset-sovelluksen kautta</td><td>Applen Muistutukset-sovellus, puhelimella / käyttäjän iCloud</td></tr>
+    <tr><td>Yhteystiedot</td><td>Syntymäpäivien tuonti tärkeisiin päiviin</td><td>Vain laitteella</td></tr>
+    <tr><td>Sijainti (karkea)</td><td>Paikallisen sääennusteen hakeminen vaatetusvinkkejä varten</td><td>Lähetetään säätietoja tarjoavalle palvelulle hakua varten, ei tallenneta</td></tr>
+    <tr><td>Kuvat (valinnainen)</td><td>Kuvan liittäminen erikoispäivän muistutukseen, esim. lupalappu</td><td>Vain laitteella / perheen iCloudissa, jos jaettu</td></tr>
+    <tr><td>Ilmoitukset</td><td>Ilta- ja aamumuistutukset, kotitöiden kuittaukset</td><td>Vain laitteella</td></tr>
+    <tr><td>Perheen jaettu data (menot, muistikirja, kotityöt)</td><td>Perheen yhteiskäyttö</td><td>Käyttäjän oman perheen iCloud (CloudKit), ei Someset Oy:n palvelimella</td></tr>
+    <tr><td>Tilaustiedot (jos tilaat Arjen apuri Plussan)</td><td>Tilauksen voimassaolon tarkistus</td><td>Apple (App Store) ja RevenueCat, ks. alla</td></tr>
+  </table>
+
+  <h2>Kolmannet osapuolet</h2>
+  <p>Sovellus käyttää seuraavia ulkopuolisia palveluja, jotka käsittelevät rajattua tietoa niille osoitetussa tarkoituksessa:</p>
+  <ul>
+    <li><strong>Apple (iCloud / CloudKit, App Store):</strong> perheen jaetun datan synkronointi sekä tilausten ja ostojen käsittely. Katso <a href="https://www.apple.com/legal/privacy/fi-FI/" target="_blank" rel="noopener">Applen tietosuojakäytäntö</a>.</li>
+    <li><strong>RevenueCat:</strong> käsittelee tilaustietoja (esim. tilauksen tila ja voimassaolo) tilausten hallintaa varten. Katso <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCatin tietosuojakäytäntö</a>.</li>
+  </ul>
+  <p>Sovellus ei myy eikä jaa tietoja mainostarkoituksiin, eikä käytä kolmannen osapuolen seurantaa tai analytiikkaa.</p>
+
+  <h2>Tietojen säilytys ja poistaminen</h2>
+  <p>Koska data tallennetaan ensisijaisesti laitteellesi ja käyttäjän omaan iCloudiin, voit poistaa tiedot poistamalla sovelluksen tai sen iCloud-datan laitteesi asetuksista. Perheen jaettu data poistuu, kun viimeinen perheenjäsen poistaa sovelluksen tai jaetun iCloud-alueen.</p>
+
+  <h2>Oikeutesi</h2>
+  <p>Koska Someset Oy ei ylläpidä omaa tietokantaa käyttäjistä, suurin osa EU:n tietosuoja-asetuksen (GDPR) mukaisista oikeuksistasi (tarkastus, oikaisu, poisto) toteutuu suoraan laitteesi ja oman iCloud-tilisi kautta. Jos sinulla on kysyttävää tietojesi käsittelystä, ota yhteyttä: <a href="mailto:info@rakennuskuntoon.fi">info@rakennuskuntoon.fi</a>.</p>
+
+  <h2>Muutokset tähän selosteeseen</h2>
+  <p>Tätä selostetta voidaan päivittää sovelluksen kehittyessä. Merkittävistä muutoksista ilmoitetaan sovelluksen sisällä.</p>
+
+  <footer><a href="index.html">← Takaisin tukisivulle</a></footer>
+</body>
+</html>
