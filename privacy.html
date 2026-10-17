@@ -37,11 +37,13 @@
   td, th { border: 1px solid #e4e4e0; padding: 8px 10px; text-align: left; vertical-align: top; }
   footer { margin-top: 3em; font-size: 0.85rem; opacity: 0.7; }
   .updated { font-size: 0.85rem; opacity: 0.7; }
+  .lang { font-size: 0.9rem; }
 </style>
 </head>
 <body>
   <h1>Arjen apuri — Tietosuojaseloste</h1>
-  <p class="updated">Päivitetty 12.10.2026</p>
+  <p class="updated">Päivitetty 17.10.2026</p>
+  <p class="lang"><a href="#en">In English</a></p>
 
   <div class="card">
     <strong>Rekisterinpitäjä</strong>
@@ -51,38 +53,82 @@
   </div>
 
   <h2>Yleisperiaate</h2>
-  <p>Arjen apuri on suunniteltu niin, ettei sovelluksella ole omaa palvelinta eikä käyttäjätiliä. Kaikki tallentamasi tiedot (menot, muistikirja, kauppalista, lasten tähdet jne.) tallennetaan ensisijaisesti laitteellesi. Jos otat käyttöön perheen jakamisen, tiedot synkronoidaan Applen iCloud-palvelun (CloudKit) kautta suoraan perheesi laitteiden välillä — Someset Oy ei näe eikä käsittele tätä dataa omilla palvelimillaan.</p>
+  <p>Arjen apurilla ei ole omaa palvelinta eikä käyttäjätiliä. Tallentamasi tiedot (perheenjäsenet, menot, muistikirja, kauppalista, kotityöt, tähdet ja viikkorahat) tallennetaan puhelimeesi. Jos otat käyttöön perheen jakamisen, tiedot synkronoidaan Applen iCloud-palvelun (CloudKit) kautta perheen perustajan iCloud-tilille ja niille perheenjäsenille, jotka perustaja kutsuu. Someset Oy ei näe eikä käsittele näitä tietoja.</p>
 
   <h2>Mitä tietoja käsitellään ja miksi</h2>
   <table>
-    <tr><th>Tieto</th><th>Käyttötarkoitus</th><th>Missä tieto säilyy</th></tr>
-    <tr><td>Kalenteritapahtumat</td><td>Näytetään päivän/viikon menot ja pakkauslistat</td><td>Vain laitteella, luetaan puhelimen omasta kalenterista</td></tr>
-    <tr><td>Muistutukset (Reminders)</td><td>Kauppalistan synkronointi, jaettavissa kumppanin kanssa Applen Muistutukset-sovelluksen kautta</td><td>Applen Muistutukset-sovellus, puhelimella / käyttäjän iCloud</td></tr>
-    <tr><td>Yhteystiedot</td><td>Syntymäpäivien tuonti tärkeisiin päiviin</td><td>Vain laitteella</td></tr>
-    <tr><td>Sijainti (karkea)</td><td>Paikallisen sääennusteen hakeminen vaatetusvinkkejä varten</td><td>Lähetetään säätietoja tarjoavalle palvelulle hakua varten, ei tallenneta</td></tr>
-    <tr><td>Kuvat (valinnainen)</td><td>Kuvan liittäminen erikoispäivän muistutukseen, esim. lupalappu</td><td>Vain laitteella / perheen iCloudissa, jos jaettu</td></tr>
-    <tr><td>Ilmoitukset</td><td>Ilta- ja aamumuistutukset, kotitöiden kuittaukset</td><td>Vain laitteella</td></tr>
-    <tr><td>Perheen jaettu data (menot, muistikirja, kotityöt)</td><td>Perheen yhteiskäyttö</td><td>Käyttäjän oman perheen iCloud (CloudKit), ei Someset Oy:n palvelimella</td></tr>
-    <tr><td>Tilaustiedot (jos tilaat Arjen apuri Plussan)</td><td>Tilauksen voimassaolon tarkistus</td><td>Apple (App Store) ja RevenueCat, ks. alla</td></tr>
+    <tr><th>Tieto</th><th>Käyttötarkoitus</th><th>Missä tieto on</th></tr>
+    <tr><td>Kalenteritapahtumat</td><td>Päivän ja viikon menot sekä pakattavat tavarat</td><td>Luetaan puhelimen kalenterista. Jos perheen jakaminen on päällä, perheenjäsenelle merkittyjen kalenterien lähipäivien tapahtumat jaetaan perheelle iCloudin kautta.</td></tr>
+    <tr><td>Muistutukset (Reminders)</td><td>Kauppalistan synkronointi ja jakaminen kumppanin kanssa</td><td>Applen Muistutukset-sovellus, puhelimessa ja käyttäjän omassa iCloudissa</td></tr>
+    <tr><td>Yhteystiedot</td><td>Kumppanin valinta ja syntymäpäivien tuonti, vain kun valitset ne itse</td><td>Vain puhelimessa</td></tr>
+    <tr><td>Sijainti</td><td>Paikallinen sääennuste vaatetusvinkkejä varten</td><td>Sijainti haetaan pienellä tarkkuudella, ja koordinaatit pyöristetään noin 100 metrin tarkkuuteen ennen lähettämistä Open-Meteo-säätietopalveluun. Paikkakunnan voi myös kirjoittaa itse. Kotipaikka jaetaan perheelle, jos perheen jakaminen on päällä.</td></tr>
+    <tr><td>Kuvat ja kamera (valinnainen)</td><td>Perheenjäsenen kuva, erikoispäivän kuvaliite (esim. lupalappu) ja reseptin kuva</td><td>Vain puhelimessa. Kuvat tulevat mukaan vain itse viemääsi varmuuskopiotiedostoon.</td></tr>
+    <tr><td>Ilmoitukset</td><td>Iltakatsaus, aamumuistutukset ja kotitöiden muistutukset</td><td>Ajastetaan puhelimessa</td></tr>
+    <tr><td>Perheen jaettu data</td><td>Perheen yhteiskäyttö: menot, kotityöt, kauppalista, muistikirja, tähdet ja viikkorahat, perheenjäsenet ja roolit</td><td>Perustajan iCloud (CloudKit) ja kutsuttujen laitteet, ei Someset Oy:n palvelimella</td></tr>
+    <tr><td>Tilaustiedot</td><td>Tilauksen voimassaolon tarkistus koko perheelle</td><td>Apple (App Store) ja RevenueCat. Tilaus yhdistetään perheeseen satunnaisella, nimettömällä perhetunnisteella, joka ei sisällä nimiä eikä muita perheen tietoja.</td></tr>
+    <tr><td>Kokeilujakson tiedot</td><td>Kokeilujakson alkamisaika, jotta 14 päivän kokeilu ei ala uudelleen</td><td>Puhelimen avainnipussa (Keychain), säilyy sovelluksen uudelleenasennuksen yli</td></tr>
   </table>
 
   <h2>Kolmannet osapuolet</h2>
-  <p>Sovellus käyttää seuraavia ulkopuolisia palveluja, jotka käsittelevät rajattua tietoa niille osoitetussa tarkoituksessa:</p>
+  <p>Sovellus käyttää seuraavia ulkopuolisia palveluja, jotka käsittelevät vain niille tarpeellista tietoa:</p>
   <ul>
     <li><strong>Apple (iCloud / CloudKit, App Store):</strong> perheen jaetun datan synkronointi sekä tilausten ja ostojen käsittely. Katso <a href="https://www.apple.com/legal/privacy/fi-FI/" target="_blank" rel="noopener">Applen tietosuojakäytäntö</a>.</li>
-    <li><strong>RevenueCat:</strong> käsittelee tilaustietoja (esim. tilauksen tila ja voimassaolo) tilausten hallintaa varten. Katso <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCatin tietosuojakäytäntö</a>.</li>
+    <li><strong>RevenueCat:</strong> tilauksen tila ja voimassaolo nimettömällä perhetunnisteella sekä ostotapahtumien tiedot. Katso <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCatin tietosuojakäytäntö</a>.</li>
+    <li><strong>Open-Meteo:</strong> sääennuste pyöristettyjen koordinaattien tai kirjoitetun paikkakunnan perusteella. Katso <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Open-Meteon käyttöehdot</a>.</li>
   </ul>
-  <p>Sovellus ei myy eikä jaa tietoja mainostarkoituksiin, eikä käytä kolmannen osapuolen seurantaa tai analytiikkaa.</p>
+  <p>Sovellus ei myy eikä jaa tietoja mainostarkoituksiin, eikä se käytä mainontaa, seurantaa tai analytiikkaa.</p>
 
   <h2>Tietojen säilytys ja poistaminen</h2>
-  <p>Koska data tallennetaan ensisijaisesti laitteellesi ja käyttäjän omaan iCloudiin, voit poistaa tiedot poistamalla sovelluksen tai sen iCloud-datan laitteesi asetuksista. Perheen jaettu data poistuu, kun viimeinen perheenjäsen poistaa sovelluksen tai jaetun iCloud-alueen.</p>
+  <p>Voit poistaa puhelimen tiedot sovelluksen asetuksista (Tyhjennä kaikki tiedot) tai poistamalla sovelluksen. Kokeilujakson alkamisaika säilyy avainnipussa sovelluksen poiston jälkeenkin, mutta se ei sisällä henkilötietoja.</p>
+  <p>Perheen jaetut tiedot ovat perustajan iCloudissa. Perustajan tekemä tyhjennys poistaa ne koko perheeltä. Kutsuttu jäsen voi poistua perheestä tyhjentämällä tietonsa, jolloin perheen tiedot säilyvät muilla. iCloud-tiedot voi poistaa myös iPhonen asetuksista (Asetukset → oma nimi → iCloud → Hallitse tallennustilaa).</p>
 
   <h2>Oikeutesi</h2>
-  <p>Koska Someset Oy ei ylläpidä omaa tietokantaa käyttäjistä, suurin osa EU:n tietosuoja-asetuksen (GDPR) mukaisista oikeuksistasi (tarkastus, oikaisu, poisto) toteutuu suoraan laitteesi ja oman iCloud-tilisi kautta. Jos sinulla on kysyttävää tietojesi käsittelystä, ota yhteyttä: <a href="mailto:info@rakennuskuntoon.fi">info@rakennuskuntoon.fi</a>.</p>
+  <p>Someset Oy ei ylläpidä omaa tietokantaa käyttäjistä, joten suurin osa EU:n tietosuoja-asetuksen (GDPR) mukaisista oikeuksistasi (tarkastus, oikaisu ja poisto) toteutuu suoraan puhelimesi ja oman iCloud-tilisi kautta. Tilaukseen liittyvissä asioissa voit ottaa yhteyttä myös meihin. Jos sinulla on kysyttävää tietojesi käsittelystä, ota yhteyttä: <a href="mailto:info@rakennuskuntoon.fi">info@rakennuskuntoon.fi</a>.</p>
 
   <h2>Muutokset tähän selosteeseen</h2>
-  <p>Tätä selostetta voidaan päivittää sovelluksen kehittyessä. Merkittävistä muutoksista ilmoitetaan sovelluksen sisällä.</p>
+  <p>Tätä selostetta voidaan päivittää sovelluksen kehittyessä. Päivityspäivä näkyy sivun alussa.</p>
 
-  <footer><a href="index.html">← Takaisin tukisivulle</a></footer>
+  <hr id="en" style="margin-top: 3em;" />
+
+  <h1>Arjen apuri — Privacy Policy</h1>
+  <p class="updated">Updated 17 October 2026</p>
+
+  <div class="card">
+    <strong>Controller</strong>
+    <p>Someset Oy (Business ID 94916239)<br />
+    Mertatie 14, 21100 Naantali, Finland<br />
+    Email: <a href="mailto:info@rakennuskuntoon.fi">info@rakennuskuntoon.fi</a></p>
+  </div>
+
+  <h2>Principle</h2>
+  <p>Arjen apuri has no server of its own and no user account. The information you enter (family members, plans, notebook, shopping list, chores, stars and allowances) is stored on your phone. If you turn on family sharing, it is synced through Apple iCloud (CloudKit) to the family founder’s iCloud account and to the family members the founder invites. Someset Oy cannot see or process this information.</p>
+
+  <h2>What is processed and why</h2>
+  <ul>
+    <li><strong>Calendar events:</strong> read from the phone’s calendar to show plans and things to pack. With family sharing on, upcoming events from calendars assigned to a family member are shared with the family through iCloud.</li>
+    <li><strong>Reminders:</strong> shopping list sync, in Apple’s Reminders app and your own iCloud.</li>
+    <li><strong>Contacts:</strong> choosing a partner and importing birthdays, only when you pick them. Stays on the phone.</li>
+    <li><strong>Location:</strong> fetched at low accuracy and rounded to about 100 metres before being sent to the Open-Meteo weather service. You can also type a place name. Your home location is shared with the family if family sharing is on.</li>
+    <li><strong>Photos and camera (optional):</strong> family member photos, special-day attachments and recipe photos. Stay on the phone; included only in a backup file you export yourself.</li>
+    <li><strong>Notifications:</strong> scheduled on the phone.</li>
+    <li><strong>Subscription:</strong> Apple (App Store) and RevenueCat. The subscription is linked to the family with a random, anonymous family identifier that contains no names or other family data.</li>
+    <li><strong>Trial information:</strong> the start date of the 14-day trial is kept in the phone’s Keychain so that the trial does not restart. It survives reinstalling the app and contains no personal data.</li>
+  </ul>
+
+  <h2>Third parties</h2>
+  <ul>
+    <li><strong>Apple (iCloud / CloudKit, App Store):</strong> family sharing sync and purchases. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple’s privacy policy</a>.</li>
+    <li><strong>RevenueCat:</strong> subscription status with an anonymous family identifier and purchase records. See <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat’s privacy policy</a>.</li>
+    <li><strong>Open-Meteo:</strong> weather forecasts from rounded coordinates or a typed place name. See <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Open-Meteo’s terms</a>.</li>
+  </ul>
+  <p>The app does not sell or share data for advertising and uses no advertising, tracking or analytics.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>You can delete the data on your phone in the app’s settings (Clear all data) or by deleting the app. The trial start date stays in the Keychain but contains no personal data. Shared family data is stored in the founder’s iCloud: clearing data on the founder’s phone removes it for the whole family, while an invited member who clears their data leaves the family and the data stays with the others. iCloud data can also be removed in iPhone Settings (your name → iCloud → Manage Storage).</p>
+
+  <h2>Your rights</h2>
+  <p>Someset Oy keeps no database of users, so most of your rights under the EU General Data Protection Regulation (access, rectification and erasure) are exercised directly on your phone and in your own iCloud account. For questions, contact <a href="mailto:info@rakennuskuntoon.fi">info@rakennuskuntoon.fi</a>.</p>
+
+  <footer><a href="index.html">← Takaisin tukisivulle / Back to support page</a></footer>
 </body>
 </html>
