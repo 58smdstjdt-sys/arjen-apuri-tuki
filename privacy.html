@@ -44,7 +44,7 @@
 </head>
 <body>
   <h1>Arjen apuri — Tietosuojaseloste</h1>
-  <p class="updated">Päivitetty 17.10.2026</p>
+  <p class="updated">Päivitetty 21.10.2026</p>
   <p class="lang"><a href="#en">In English</a></p>
 
   <div class="card">
@@ -64,9 +64,9 @@
     <tr><td>Muistutukset (Reminders)</td><td>Kauppalistan synkronointi ja jakaminen kumppanin kanssa</td><td>Applen Muistutukset-sovellus, puhelimessa ja käyttäjän omassa iCloudissa</td></tr>
     <tr><td>Yhteystiedot</td><td>Kumppanin valinta ja syntymäpäivien tuonti, vain kun valitset ne itse</td><td>Vain puhelimessa</td></tr>
     <tr><td>Sijainti</td><td>Paikallinen sääennuste vaatetusvinkkejä varten</td><td>Sijainti haetaan pienellä tarkkuudella, ja koordinaatit pyöristetään noin 100 metrin tarkkuuteen ennen lähettämistä Open-Meteo-säätietopalveluun. Paikkakunnan voi myös kirjoittaa itse. Kotipaikka jaetaan perheelle, jos perheen jakaminen on päällä.</td></tr>
-    <tr><td>Kuvat ja kamera (valinnainen)</td><td>Perheenjäsenen kuva, erikoispäivän kuvaliite (esim. lupalappu) ja reseptin kuva</td><td>Vain puhelimessa. Kuvat tulevat mukaan vain itse viemääsi varmuuskopiotiedostoon.</td></tr>
+    <tr><td>Kuvat ja kamera (valinnainen)</td><td>Perheenjäsenen kuva, erikoispäivän kuvaliite (esim. lupalappu) ja reseptin kuva</td><td>Puhelimessa. Jos perheen jakaminen on päällä, kuvat synkronoidaan muiden perheen tietojen tavoin perustajan iCloudin (CloudKit) kautta perheen laitteille. Kuvat tulevat mukaan myös itse viemääsi varmuuskopiotiedostoon.</td></tr>
     <tr><td>Ilmoitukset</td><td>Iltakatsaus, aamumuistutukset ja kotitöiden muistutukset</td><td>Ajastetaan puhelimessa</td></tr>
-    <tr><td>Perheen jaettu data</td><td>Perheen yhteiskäyttö: menot, kotityöt, kauppalista, muistikirja, tähdet ja viikkorahat, perheenjäsenet ja roolit</td><td>Perustajan iCloud (CloudKit) ja kutsuttujen laitteet, ei Someset Oy:n palvelimella</td></tr>
+    <tr><td>Perheen jaettu data</td><td>Perheen yhteiskäyttö: menot, kotityöt, kauppalista, muistikirja, tähdet ja viikkorahat, perheenjäsenet ja roolit sekä perheenjäsenten, menojen ja reseptien kuvat</td><td>Perustajan iCloud (CloudKit) ja kutsuttujen laitteet, ei Someset Oy:n palvelimella</td></tr>
     <tr><td>Tilaustiedot</td><td>Tilauksen voimassaolon tarkistus koko perheelle</td><td>Apple (App Store) ja RevenueCat. Tilaus yhdistetään perheeseen satunnaisella, nimettömällä perhetunnisteella, joka ei sisällä nimiä eikä muita perheen tietoja.</td></tr>
     <tr><td>Kokeilujakson tiedot</td><td>Kokeilujakson alkamisaika, jotta 14 päivän kokeilu ei ala uudelleen</td><td>Puhelimen avainnipussa (Keychain), säilyy sovelluksen uudelleenasennuksen yli</td></tr>
   </table>
@@ -74,7 +74,7 @@
   <h2>Kolmannet osapuolet</h2>
   <p>Sovellus käyttää seuraavia ulkopuolisia palveluja, jotka käsittelevät vain niille tarpeellista tietoa:</p>
   <ul>
-    <li><strong>Apple (iCloud / CloudKit, App Store):</strong> perheen jaetun datan synkronointi sekä tilausten ja ostojen käsittely. Katso <a href="https://www.apple.com/legal/privacy/fi-FI/" target="_blank" rel="noopener">Applen tietosuojakäytäntö</a>.</li>
+    <li><strong>Apple (iCloud / CloudKit, App Store):</strong> perheen jaetun datan synkronointi sekä tilausten ja ostojen käsittely. Katso <a href="https://www.apple.com/fi/legal/privacy/" target="_blank" rel="noopener">Applen tietosuojakäytäntö</a>.</li>
     <li><strong>RevenueCat:</strong> tilauksen tila ja voimassaolo nimettömällä perhetunnisteella sekä ostotapahtumien tiedot. Katso <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCatin tietosuojakäytäntö</a>.</li>
     <li><strong>Open-Meteo:</strong> sääennuste pyöristettyjen koordinaattien tai kirjoitetun paikkakunnan perusteella. Katso <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Open-Meteon käyttöehdot</a>.</li>
   </ul>
@@ -93,7 +93,7 @@
   <hr id="en" style="margin-top: 3em;" />
 
   <h1>Arjen apuri — Privacy Policy</h1>
-  <p class="updated">Updated 17 October 2026</p>
+  <p class="updated">Updated 21 October 2026</p>
 
   <div class="card">
     <strong>Controller</strong>
@@ -111,7 +111,7 @@
     <li><strong>Reminders:</strong> shopping list sync, in Apple’s Reminders app and your own iCloud.</li>
     <li><strong>Contacts:</strong> choosing a partner and importing birthdays, only when you pick them. Stays on the phone.</li>
     <li><strong>Location:</strong> fetched at low accuracy and rounded to about 100 metres before being sent to the Open-Meteo weather service. You can also type a place name. Your home location is shared with the family if family sharing is on.</li>
-    <li><strong>Photos and camera (optional):</strong> family member photos, special-day attachments and recipe photos. Stay on the phone; included only in a backup file you export yourself.</li>
+    <li><strong>Photos and camera (optional):</strong> family member photos, special-day attachments and recipe photos. Stored on the phone. With family sharing on, they are synced like the rest of the family’s data through the founder’s iCloud (CloudKit) to the family’s devices. Also included in a backup file you export yourself.</li>
     <li><strong>Notifications:</strong> scheduled on the phone.</li>
     <li><strong>Subscription:</strong> Apple (App Store) and RevenueCat. The subscription is linked to the family with a random, anonymous family identifier that contains no names or other family data.</li>
     <li><strong>Trial information:</strong> the start date of the 14-day trial is kept in the phone’s Keychain so that the trial does not restart. It survives reinstalling the app and contains no personal data.</li>
